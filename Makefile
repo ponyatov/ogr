@@ -62,6 +62,11 @@ tmp/format: \
 # \ doc
 .PHONY: doc
 doc: \
+	doc/week12-2013.pdf doc/LispInSmallPieces_ru.pdf
+doc/week12-2013.pdf:
+	$(CURL) $@ https://www.epfl.ch/labs/lamp/wp-content/uploads/2019/01/week12-2013.pdf
+doc/LispInSmallPieces_ru.pdf:
+	$(CURL) $@ https://github.com/ilammy/lisp/releases/download/v.1.2/lisp.pdf
 
 .PHONY: doxy
 doxy: doxy.gen
